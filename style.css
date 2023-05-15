@@ -564,15 +564,18 @@ z-index:-1;
       margin: 1rem 0;
      display: inline-block;
     position: relative;
-    color: var(--accesnt-color);
-      font-size: var(--h3-font-size);
-      text-transform: uppercase;
-      font-weight: var(--font-semi-bold);
+ 
       
       cursor: pointer;
       border: none;
       outline: none;
 
+    }
+    .sectionBtn a{
+      color: var(--accesnt-color);
+      font-size: var(--h3-font-size);
+      text-transform: uppercase;
+      font-weight: var(--font-medium);
     }
     .sectionBtn::after{
       content: "";
