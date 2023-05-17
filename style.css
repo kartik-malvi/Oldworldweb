@@ -119,6 +119,7 @@ img {
   font-weight: var(--font-semi-bold);
   margin-bottom: var(--mb-1);
   line-height: 4.501rem;
+  text-transform: capitalize;
 
 }
 .sectionTitle::after{
@@ -135,6 +136,7 @@ color: var(--accesnt-color);
 }
 .flex {
   display: flex;
+
 }
 .grid {
   display: grid;
@@ -227,56 +229,72 @@ li a {
 /* toggleGaqButton */
 
 .btn {
-  font-size: 1rem;
+  height: 55%;
   font-weight: 500;
   text-transform: capitalize;
   border: 1px solid rgba(151, 71, 255, 1);
   border-radius: 100px;
-  background-color: transparent;
+  /* background-color: transparent; */
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  
 }
 /* menuButton */
 /* .navBtn .btnVisible{
   padding: 0.625rem 1rem;
 
 }*/
-.navBtn .btnInVisible{
-left: 18%;
-} 
+
 .navBtn {
   border: 1px solid var(--text-color);
-  font-size: 1rem;
+  /* font-size: 1rem;
+  position: relative; */
 }
+
 .btn > * {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
+  position: relative;
 
   /* color: #fff; */
 }
 .btnVisible {
-  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 2rem;
   color: var(--text-color);
   transition: all 1s ; /* Adjust the transition timing */
+ 
 }
+.btnVisible :last-child{
+font-size: 2rem;}
+
 
 .btnInVisible {
   position: absolute;
   top: 100%;
   transition: all 1s; /* Adjust the transition timing */
-
-  left: 14%;
-  padding: 1rem 0;
+  /* left: 14%; */
+  padding: 0.625rem 0;
+  display: flex;
+  align-items: center;
+ 
 }
-
+.btnInVisible :last-child{
+font-size: 2rem;
+}
 .btn:hover .btnVisible {
   transform: translateY(-100%);
 }
 .btn:hover .btnInVisible {
   transform: translateY(-100%);
   color: var(--accesnt-color);
+ 
 }
 
 hr {
@@ -315,7 +333,7 @@ z-index: 3;
   padding: 1rem;
 }
 .gaqdiv {
-  width: 210px;
+  width:70%;
 }
 .gridItem:hover {
   background-color: var(--priamry-color);
@@ -465,7 +483,7 @@ z-index:-1;
   right: -15%;
   top: -15%;
   bottom: -15%;
-  animation: animate 6s linear infinite;
+  animation: animate .8s linear infinite;
   opacity: 0.8;
   }
   .playBtn:after{
@@ -479,7 +497,7 @@ z-index:-1;
     right: -40%;
     top: -40%;
     bottom: -40%;
-    animation: animate 6s linear infinite;
+    animation: animate .8s linear infinite;
     opacity: 0.8;
   }
   .playBtn:hover{
@@ -534,14 +552,14 @@ z-index:-1;
       flex-basis: 45%;
     position: relative;
     }
-    .sectionLable{
+    .sectionLable, .contactLable{
       font-size: var(--h3-font-size);
       font-weight: var(--font-normal);
       text-transform: uppercase;
       margin-left: 6rem;
       margin-bottom: var(--mb-1-5);
     }
-    .sectionLable::after{
+    .sectionLable::after, .contactLable::after{
       content: "";
       width: 78px;
       height: 1px;
@@ -551,11 +569,12 @@ z-index:-1;
       top:3%;
     }
 
-    .aboutText p{
+    .aboutText p,.contactForm p{
       font-size: var(--h3-font-size);
       font-weight: var(--font-medium);
       line-height: 1.3;
       margin-bottom: var(--mb-1);
+      color: var(--text-color);
     }
     .sectionBtn{
       width: 150px;
@@ -608,8 +627,9 @@ z-index:-1;
 }
 .serviceGrid > * {
   padding: 2rem;
-  
- 
+}
+.service{
+  margin-bottom: 4rem;
 }
 .serviceGrid p{
   font-size: var(--normal-font-size);
@@ -689,12 +709,14 @@ z-index:-1;
 .slider-container {
   
   display: flex;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  align-items: center;
+
 }
 
 .slide {
   flex: 0 0 380px;
-  height: 480px;
+  height: 450px;
   margin: 0.625rem;
   background-color: var(--backGround-color);
   border: none;
@@ -703,7 +725,7 @@ z-index:-1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   text-align: center;
   
 
@@ -729,11 +751,45 @@ z-index:-1;
   border-bottom: 1px solid var(--accesnt-color);
 }
 
+/* contactForm */
 
+.contactSection{
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
 
+}
+.contactForm{
+  flex-basis: 45%;
+  position: relative;
 
+}
+.contactLable::after{
+  top: 2%;
+}
+.contactImg{
+  flex-basis: 45%;
+}
+/* form */
 
+.name, .email, .massage{
+  outline: none;
+  border: none;
+  padding: 1rem 0;
+  background-color: transparent;
+  border-bottom: 1px solid var(--text-color);
+  margin: 1rem ;
+  color: var(--header-height);
+}
 
+.name.email.massage:active{
+  color: var(--text-color);
+}
+button{
+  background-color: transparent;
+  margin-top: var(--mb-2);
+}
 
 
 

@@ -7,7 +7,7 @@ serviceBtn.addEventListener('click', ()=>{
 })
 
 
-
+// carousal
 
 const sliderContainer = document.querySelector('.slider-container');
 const prevBtn = document.getElementById('prevBtn');
@@ -36,5 +36,5 @@ nextBtn.addEventListener('click', () => {
 });
 
 function updateSliderPosition() {
-  sliderContainer.style.transform = `translateX(-${slidePosition * (360 + 40 )}px)`;
+  sliderContainer.style.transform = `translateX(-${slidePosition * (380 +  25)}px)`;
 }
