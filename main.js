@@ -38,3 +38,83 @@ nextBtn.addEventListener('click', () => {
 function updateSliderPosition() {
   sliderContainer.style.transform = `translateX(-${slidePosition * (380 +  25)}px)`;
 }
+
+// caseCarousal
+
+// cosnt caseSlider = Dicument.querySelector('.sliderConatiner')
+// const caseContainer =document.querySelector('.caseContainer')
+// const casePre = document.getElementById('cprevBtn');
+// const caseNext = document.getElementById('cnextBtn');
+
+// let caseSlidePosition = 0;
+// const caseSlides = document.getElementsByClassName('caseSlide')
+// const totalCaseSlide = caseSlides.length;
+
+// casePre.addEventListener('click', () => {
+//   if(caseSlidePosition === 0) {
+//     caseSlidePosition = totalCaseSlide - 3;
+//   }else{
+//     caseSlidePosition--;
+//   }
+//   caseUpdatePosition();
+// });
+// caseNext.addEventListener('click',  () =>{
+//   if(caseSlidePosition === totalCaseSlide - 3){
+//     caseSlidePosition = 0;
+//   }else{
+//     caseSlidePosition++;
+//   }
+//   caseUpdatePosition();
+// });
+// function caseUpdatePosition() {
+//   caseContainer.style.transform = `translateX(-${caseSlidePosition * (380 + 25)}px)`;
+// }
+
+
+const caseContainer = document.querySelector('.caseContainer');
+const casePre = document.getElementById('cprevBtn');
+const caseNext = document.getElementById('cnextBtn');
+
+let caseSlidePosition = 0;
+const caseSlides = document.getElementsByClassName('caseSlide');
+const totalCaseSlide = caseSlides.length;
+let intervalId;
+
+function startAutoSlide() {
+  intervalId = setInterval(() => {
+    if (caseSlidePosition === totalCaseSlide - 3) {
+      caseSlidePosition = 0;
+    } else {
+      caseSlidePosition++;
+    }
+    caseUpdatePosition();
+  }, 3000); // Adjust the interval time (in milliseconds) as needed
+}
+
+function stopAutoSlide() {
+  clearInterval(intervalId);
+}
+
+casePre.addEventListener('click', () => {
+  if (caseSlidePosition === 0) {
+    caseSlidePosition = totalCaseSlide - 3;
+  } else {
+    caseSlidePosition--;
+  }
+  caseUpdatePosition();
+});
+
+caseNext.addEventListener('click', () => {
+  if (caseSlidePosition === totalCaseSlide - 3) {
+    caseSlidePosition = 0;
+  } else {
+    caseSlidePosition++;
+  }
+  caseUpdatePosition();
+});
+
+function caseUpdatePosition() {
+  caseContainer.style.transform = `translateX(-${caseSlidePosition * (380 + 25)}px)`;
+}
+
+startAutoSlide();
