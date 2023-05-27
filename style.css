@@ -165,7 +165,7 @@ ul {
   align-items: center;
   justify-content: space-between;
 }
-li a {
+li, li a {
   font-size: 1.25rem;
   color: var(--heading-color);
   text-transform: capitalize;
@@ -265,7 +265,7 @@ li a {
   justify-content: center;
   padding: 0.625rem 2rem;
   color: var(--text-color);
-  transition: all 1s; /* Adjust the transition timing */
+  transition: ease-in-out 1s; /* Adjust the transition timing */
 }
 .btnVisible :last-child {
   font-size: 2rem;
@@ -274,7 +274,7 @@ li a {
 .btnInVisible {
   position: absolute;
   top: 100%;
-  transition: all 1s; /* Adjust the transition timing */
+  transition: ease-in-out 1s; /* Adjust the transition timing */
   /* left: 14%; */
   padding: 0.625rem 0;
   display: flex;
@@ -577,6 +577,7 @@ hr {
   color: var(--text-color);
 }
 .sectionBtn {
+
   width: 150px;
   height: 60px;
   padding: 1rem 0;
@@ -609,6 +610,13 @@ hr {
   width: 60%;
   background-color: var(--accesnt-color);
   display: block;
+}
+/* for  SEE ALL CASES  */
+.caseBtn{
+  width: 220px;
+  position: absolute;
+  top: 4%;
+  right: 12%;
 }
 
 /* serviceSection */
@@ -784,7 +792,7 @@ hr {
   padding: 1rem 0;
   background-color: transparent;
   border-bottom: 1px solid var(--text-color);
-  margin: 1rem;
+  margin: 1rem 0;
   color: var(--header-height);
 }
 
@@ -1077,4 +1085,34 @@ button {
   display: block;
   transform: translateY(80%);
   transition: 0.6s;
+}
+.newsLatterform{
+  display: flex;
+  justify-content: space-between;
+}
+.newsLatterform input{
+  flex-basis: 60%;
+}
+.newsLatterform button{
+  flex-basis: 20%;
+  height: 60px;
+}
+.bx-send{
+  font-size: 2rem;
+}
+/* FOOTER */
+footer .flex{
+  align-items: center;
+  justify-content: space-around;
+}
+.footerTitle{
+  font-size: 1.425rem;
+  text-transform: capitalize;
+  margin-bottom: var(--mb-1-5);
+}
+.footerItems p{
+  margin-bottom: var(--mb-0-75);
+}
+.footerItems img{
+  margin-bottom: var(--mb-1);
 }
