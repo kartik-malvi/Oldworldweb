@@ -113,7 +113,7 @@ img {
   padding: 7rem 0 5rem;
   /* border-bottom: 1px solid var(--accesnt-color); */
 }
-.sectionTitle {
+.sectionTitle, .sectionTitleN, .sectionTitleT {
   font-size: var(--h1-font-size);
   color: var(--heading-color);
   font-weight: var(--font-semi-bold);
@@ -1100,6 +1100,130 @@ button {
 .bx-send{
   font-size: 2rem;
 }
+.contactImg{
+  background-image: url(./assets/Rectangle\ 32.png);
+  width: 500px;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+}
+.newsletterText{
+  padding: 3rem;
+}
+.newsletterText p{
+  display: inline-block;
+}
+.intro {
+  width: 100%;
+  align-items: center;
+  margin-bottom: var(--mb-3);
+}
+.names{
+  margin-left: 3rem;
+}
+.names span{
+  font-size: 1.625rem;
+  text-transform: capitalize;
+  margin-bottom: var(--mb-0-5);
+
+}
+.names p{
+  text-transform: capitalize;
+}
+.gratitude p{
+  font-size: 1.425rem;
+  line-height: 1.5rem;
+  margin-bottom: var(--mb-2);
+}
+.signatureImg{
+  margin-left:-2.75rem;
+}
+
+/*  contact us page */
+
+.conatactMain{
+ justify-content: space-around;
+  flex-direction: row-reverse;
+}
+.conatactPageCol-2{
+  flex-basis: 50%;
+}
+.conatactPageCol-1{
+  flex-basis: 30%;
+}
+
+.contactInfoBox{
+  width: 100%;
+  height: auto;
+  padding: 3rem;
+  background-color: var(--backGround-color);
+  margin-bottom: var(--mb-2-5);
+  border: none;
+  border-radius: 0.425rem;
+}
+.address{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.addresImg{
+  flex-basis: 30%;
+
+}
+.addressText{
+  flex-basis: 65%;
+}
+.addHead{
+  font-size: 1rem;
+  font-weight: var(--font-semi-bold);
+  color: var(--heading-color);
+  text-transform: capitalize;
+}
+.addText{
+  text-transform: capitalize;
+}
+.mapContainer{
+  width: 100%;
+}
+iframe{
+  filter:grayscale(100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* FOOTER */
 footer .flex{
   align-items: center;
@@ -1116,3 +1240,4 @@ footer .flex{
 .footerItems img{
   margin-bottom: var(--mb-1);
 }
+
